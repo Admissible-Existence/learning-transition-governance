@@ -1,0 +1,9 @@
+p:
+  id: p4_ltg
+  repo: learning-transition-governance
+  phase: w4
+  status: planned
+  files:
+    - tools/t.yaml
+    - validators/d.py
+    - validators/c.py
