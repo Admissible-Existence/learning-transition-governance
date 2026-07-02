@@ -1,0 +1,13 @@
+{
+  "schema": "admissible_existence.learning_transition.outcomes.v1",
+  "repo": "learning-transition-governance",
+  "outcomes": [
+    "ADMISSIBLE_DEVELOPMENT",
+    "MEASURED_CHANGE",
+    "CAPTURE_RISK",
+    "INSUFFICIENT_EVIDENCE",
+    "INADMISSIBLE_TRANSITION"
+  ],
+  "status": "outcomes_ready",
+  "authority": false
+}
