@@ -1,0 +1,16 @@
+{
+  "schema": "admissible_existence.learning_transition.stages.v1",
+  "repo": "learning-transition-governance",
+  "stages": [
+    "Exposure",
+    "Attention",
+    "Interpretation",
+    "Model Formation",
+    "Action or Expression",
+    "Feedback",
+    "Revision",
+    "Responsibility"
+  ],
+  "status": "stages_ready",
+  "authority": false
+}
