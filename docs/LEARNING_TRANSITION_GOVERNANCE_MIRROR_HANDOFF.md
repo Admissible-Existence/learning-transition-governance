@@ -3,13 +3,17 @@
 **Goal ID:** `LTG-PRINCIPLE-COMPLETENESS-001`  
 **Originating session goal:** reconcile this repository into the Admissible-Existence principle-completeness program without replacing its existing learning-stage and learning-outcome validators.  
 **Repository / branch:** `Admissible-Existence/learning-transition-governance` / `main`  
-**Status:** `CLAIMED_FOR_IMPLEMENTATION — COMPLETENESS SURFACES AND EVIDENCE PENDING`  
-**Created:** 2026-08-06T22:37:00Z
+**Status:** `CLAIMED_FOR_IMPLEMENTATION — CORE FORMALISM SURFACES INSTALLED, DOCUMENTATION AND VALIDATION PENDING`  
+**Created:** 2026-08-06T22:37:00Z  
+**Updated:** 2026-08-06T22:39:00Z
 
 ## Authoritative files
 
 - `README.md`
 - `docs/GOAL_STATUS.md`
+- `formalism/principle-registry.yaml`
+- `formalism/dependency-graph.yaml`
+- `formalism/proof-candidates.yaml`
 - `data/learning-stages.json`
 - `data/learning-outcomes.json`
 - `tools/check_learning_stages.py`
@@ -28,7 +32,7 @@
 - validation claim: `CLAIMED_FOR_VALIDATION` through the existing stage and outcome checkers, plus any repository-native workflow already present
 - claim creation: 2026-08-06T22:37:00Z
 - claim expiration: 2026-08-13T22:37:00Z unless renewed with commit or validation evidence
-- release condition: required organization completeness surfaces are installed or explicitly mapped to canonical equivalents; deterministic validation passes; evidence is persisted; this handoff and the central registry are updated
+- release condition: remaining organization completeness surfaces installed; deterministic validation passes; evidence persisted; hosted state classified; this handoff and central registry updated
 
 ## Completed repository capability
 
@@ -37,22 +41,19 @@
 - learning stages and learning outcomes are represented as data
 - repository-local stage and outcome checkers exist
 - `docs/GOAL_STATUS.md` records the existing components as ready and explicitly creates no authority, execution commitment, release-candidate claim, or cross-repository validity claim
+- principle registry installed at commit `7ac26e936a945118595d5f0932ec316f1d45ba5c`
+- dependency graph installed at commit `a23c4768917d2a0d0ee7bb864f172d0c2221d433`
+- proof-candidate registry installed at commit `f9d40765b2a30affcba6a56060a1066b50ac03ca`
+- executable issue `#1` created with finite claim and collision boundary
 
-## Incomplete work
+## Remaining work
 
-The repository is not yet complete under the organization-wide source contract merely because its status record says `ready`.
-
-Required reconciliation surfaces:
-
-1. map or install a principle registry for learning-transition governance;
-2. map or install a dependency graph covering general, human, and AI doctrine;
-3. map or install proof candidates and their required evidence classes;
-4. add a whole-repository theory map;
-5. add mathematical or formal notation where claims depend on transition structure;
-6. add explicit falsification and limits documentation;
-7. execute the existing stage and outcome validators and persist an inspectable receipt;
-8. determine whether any hosted validation path is available; if Actions remains inaccessible, record `HOSTED_VALIDATION_BLOCKED` without reopening completed deterministic work;
-9. update central routing only after repository-local evidence exists.
+1. add a whole-repository theory map;
+2. add mathematical or formal notation where claims depend on transition structure;
+3. add explicit falsification and limits documentation;
+4. execute the existing stage and outcome validators and persist an inspectable receipt;
+5. determine whether any hosted validation path is available; if Actions remains inaccessible, record `HOSTED_VALIDATION_BLOCKED` without reopening completed deterministic work;
+6. update central routing after repository-local evidence is complete.
 
 ## Collision boundaries
 
@@ -80,11 +81,11 @@ Any additional validator discovered in the live repository must be added to the 
 
 `MERGED INTO: Admissible-Existence/learning-transition-governance/docs/LEARNING_TRANSITION_GOVERNANCE_MIRROR_HANDOFF.md and issue #1`
 
-No learning-transition requirement from this session should remain only in chat.
+No learning-transition requirement from this session remains only in chat.
 
 ## Archive conditions
 
-- organization completeness surfaces reconciled;
+- remaining organization completeness surfaces reconciled;
 - deterministic validators executed successfully;
 - receipt committed;
 - hosted evidence inspected or exact Actions blocker recorded;
@@ -94,9 +95,9 @@ No learning-transition requirement from this session should remain only in chat.
 
 ## Metrics
 
-- developed-file reconciliation: 1/7
+- developed-file reconciliation: 4/7
 - validation: 0/3
-- integration: 1/3
-- goal activation: 20%
+- integration: 2/3
+- goal activation: 50%
 - session transfer: complete
 - archive readiness: false
