@@ -1,0 +1,45 @@
+schema_version: 1.0.0
+registry_id: ltg-principle-registry
+repository: Admissible-Existence/learning-transition-governance
+authority_effect: false
+principles:
+  - id: LTG-P001
+    name: learning_is_a_state_transition
+    statement: Learning is a change in future interpretation, action, judgment, or responsibility, not mere information receipt.
+    evidence:
+      - README.md
+      - data/learning-stages.json
+      - data/learning-outcomes.json
+    falsifier: Exposure occurs without any evidenced change in model, behavior, interpretation, or responsibility.
+  - id: LTG-P002
+    name: becoming_without_capture
+    statement: A learning environment may constrain safety and evidence requirements but must not predetermine final identity, agency, or intellectual destination.
+    evidence:
+      - README.md
+      - general/
+      - human/
+      - artificial-intelligence/
+    falsifier: The transition contract requires a predetermined identity or conclusion as the only admissible outcome.
+  - id: LTG-P003
+    name: evidence_precedes_learning_claim
+    statement: A learning claim requires traceable evidence across exposure, interpretation, model formation, feedback, revision, and resulting responsibility.
+    evidence:
+      - data/learning-stages.json
+      - tools/check_learning_stages.py
+      - tools/check_learning_outcomes.py
+    falsifier: A learning claim is accepted from completion, compliance, or score alone without transition evidence.
+  - id: LTG-P004
+    name: specialization_without_authority_collapse
+    statement: Human and artificial-intelligence learning specializations share transition structure but retain distinct agency, consent, authority, and accountability boundaries.
+    evidence:
+      - human/
+      - artificial-intelligence/
+      - general/
+    falsifier: One specialization inherits the authority model of another merely because their stage names align.
+non_authority:
+  ae_admissibility: false
+  execution: false
+  publication: false
+  release: false
+  certification: false
+  predetermined_identity: false
