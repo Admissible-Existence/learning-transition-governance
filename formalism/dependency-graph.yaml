@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+graph_id: ltg-dependency-graph
+repository: Admissible-Existence/learning-transition-governance
+nodes:
+  - id: general_doctrine
+    location: general/
+    role: shared transition structure
+  - id: human_specialization
+    location: human/
+    role: human agency, consent, interpretation, and responsibility boundaries
+  - id: ai_specialization
+    location: artificial-intelligence/
+    role: model update, evaluation, deployment, and operator-authority boundaries
+  - id: learning_stages
+    location: data/learning-stages.json
+    role: canonical stage vocabulary
+  - id: learning_outcomes
+    location: data/learning-outcomes.json
+    role: bounded outcome vocabulary
+  - id: stage_validator
+    location: tools/check_learning_stages.py
+    role: deterministic stage-data validation
+  - id: outcome_validator
+    location: tools/check_learning_outcomes.py
+    role: deterministic outcome-data validation
+edges:
+  - from: general_doctrine
+    to: human_specialization
+    relation: specializes_without_authority_inheritance
+  - from: general_doctrine
+    to: ai_specialization
+    relation: specializes_without_authority_inheritance
+  - from: learning_stages
+    to: stage_validator
+    relation: validated_by
+  - from: learning_outcomes
+    to: outcome_validator
+    relation: validated_by
+  - from: human_specialization
+    to: learning_stages
+    relation: constrained_by_shared_stage_vocabulary
+  - from: ai_specialization
+    to: learning_stages
+    relation: constrained_by_shared_stage_vocabulary
+invariants:
+  - human_specialization_does_not_delegate_human_authority_to_ai_specialization
+  - ai_specialization_does_not_inherit_human_consent_or_identity
+  - shared_vocabulary_does_not_create_cross_repository_admissibility
+  - validator_success_does_not_create_execution_publication_release_or_certification_authority
