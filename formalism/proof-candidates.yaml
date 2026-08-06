@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+registry_id: ltg-proof-candidates
+repository: Admissible-Existence/learning-transition-governance
+authority_effect: false
+candidates:
+  - id: LTG-PC001
+    claim: A valid learning-transition record preserves an evidence path from exposure through revision and resulting responsibility.
+    required_evidence:
+      - valid learning-stages data
+      - valid learning-outcomes data
+      - stage-to-outcome trace fixture
+      - deterministic validator receipt
+    counterexamples:
+      - exposure_without_model_change
+      - score_without_revision_evidence
+      - compliance_misclassified_as_learning
+    state: CANDIDATE_UNPROVEN
+  - id: LTG-PC002
+    claim: Safety constraints can remain admissible only when they do not predetermine learner identity or intellectual destination.
+    required_evidence:
+      - constraint declaration
+      - learner choice surface
+      - multiple admissible outcome fixtures
+      - capture-detection adversarial fixture
+    counterexamples:
+      - single_required_identity
+      - compelled_conclusion_presented_as_learning
+    state: CANDIDATE_UNPROVEN
+  - id: LTG-PC003
+    claim: Shared learning stages do not transfer agency, consent, authority, or accountability between human and AI specializations.
+    required_evidence:
+      - human specialization contract
+      - AI specialization contract
+      - non-inheritance validator
+      - cross-specialization adversarial fixtures
+    counterexamples:
+      - ai_inherits_human_consent
+      - human_accountability_silently_delegated_to_model
+    state: CANDIDATE_UNPROVEN
+  - id: LTG-PC004
+    claim: Repository-local validator success is necessary evidence but insufficient for AE admissibility, execution, publication, release, or certification.
+    required_evidence:
+      - deterministic validator receipt
+      - explicit non-authority fields
+      - downstream admission receipt when propagation is attempted
+    counterexamples:
+      - green_check_treated_as_execution_authority
+      - publication_without_consumer_admission
+    state: BOUNDARY_CLAIM
