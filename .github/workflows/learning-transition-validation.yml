@@ -1,0 +1,38 @@
+name: Learning Transition Validation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'tools/**'
+      - 'reports/learning-transition-validation-receipt.json'
+      - 'docs/LEARNING_TRANSITION_GOVERNANCE_MIRROR_HANDOFF.md'
+      - '.github/workflows/learning-transition-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate learning stages
+        run: python3 tools/check_learning_stages.py
+      - name: Validate learning outcomes
+        run: python3 tools/check_learning_outcomes.py
+      - name: Validate receipt JSON
+        run: python3 -m json.tool reports/learning-transition-validation-receipt.json >/dev/null
+      - name: Upload deterministic validation receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: learning-transition-validation-receipt
+          path: reports/learning-transition-validation-receipt.json
+          if-no-files-found: error
