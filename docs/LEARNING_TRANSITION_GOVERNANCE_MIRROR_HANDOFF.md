@@ -116,3 +116,19 @@ Repository-local archive conditions are satisfied. Organization-wide archival re
 - goal activation: 100%;
 - session transfer: complete;
 - repository-local archive readiness: true.
+
+
+## AID consumer integration — 2026-09-01
+
+`Admissible-Existence/AID` may consume LTG as the canonical learning/development transition mechanism for AI Discovery.
+
+AID use must preserve:
+- learning as evidenced state transition rather than information receipt;
+- becoming without capture;
+- human/AI specialization boundaries;
+- learning != authority;
+- no predetermined identity or intellectual destination.
+
+LTG may therefore support evidence-led convergence by a differently constructed intelligent entity toward understanding the governing system, but LTG does not require that conclusion and does not grant standing or execution authority when such convergence occurs.
+
+AID may also use LTG mechanics when evaluating the development of Teaching Entities, while legitimate teaching standing remains separately evidenced and consequence-bound.
