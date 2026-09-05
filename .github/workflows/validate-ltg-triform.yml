@@ -1,0 +1,50 @@
+name: Validate LTG Tri-Form
+
+on:
+  push:
+    branches: [ltg-triform-001]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ""
+      GITHUB_TOKEN: ""
+      STEGVERSE_TOKEN: ""
+      TVC_TOKEN: ""
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate Tri-Form manifest
+        run: |
+          python -m py_compile tools/validate_triform_manifest.py
+          python -m unittest tests.test_triform_manifest -v
+          python tools/validate_triform_manifest.py
+      - name: Regress learning stages
+        run: python tools/check_learning_stages.py
+      - name: Regress learning outcomes
+        run: python tools/check_learning_outcomes.py
+      - name: Validate deterministic receipt JSON
+        run: python -m json.tool reports/learning-transition-validation-receipt.json >/dev/null
+      - name: Declare authority boundary
+        run: |
+          echo "workflow_authority_effect=NONE_VALIDATION_ONLY"
+          echo "proof_promotion=false"
+          echo "identity_capture=false"
+          echo "predetermined_intellectual_destination=false"
+          echo "execution_authorized=false"
+          echo "publication_authorized=false"
+          echo "credential_authority_for_stegverse_runtime=TV/TVC"
+          echo "github_token_runtime_authority=NONE"
