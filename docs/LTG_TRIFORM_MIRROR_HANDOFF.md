@@ -6,7 +6,7 @@
 **Canonical issue:** `#3`  
 **Repository authority:** `docs/LEARNING_TRANSITION_GOVERNANCE_MIRROR_HANDOFF.md`  
 **Organization contract:** `Admissible-Existence/.github/docs/TRIFORM_FORMALISM_CONTRACT.md`  
-**Status:** COUNTERPART_INVENTORY_PENDING
+**Status:** BOUNDED_TRIFORM_IMPLEMENTED_PENDING_EXACT_HEAD_VALIDATION
 
 ## Purpose
 
@@ -14,13 +14,7 @@ Bind the terminalized Learning Transition Governance principle-completeness surf
 
 ## Verified starting state
 
-The canonical repository handoff reports:
-
-```text
-COMPLETE_NOTIFY_ONLY — IMPLEMENTED, DETERMINISTICALLY VALIDATED, HOSTED VALIDATED, CENTRALLY ACTIVATED
-```
-
-Repository-local archive readiness is true. Current role is regression observation only unless a separately admitted integration/propagation task exists.
+The canonical repository handoff reports `COMPLETE_NOTIFY_ONLY — IMPLEMENTED, DETERMINISTICALLY VALIDATED, HOSTED VALIDATED, CENTRALLY ACTIVATED`; repository-local archive readiness is true.
 
 Stable principle IDs:
 
@@ -31,41 +25,58 @@ LTG-P003 evidence_precedes_learning_claim
 LTG-P004 specialization_without_authority_collapse
 ```
 
-Each principle has a falsifier in `formalism/principle-registry.yaml`. Existing non-authority boundaries explicitly deny AE admissibility, execution, publication, release, certification, and predetermined identity effects.
+## Counterpart inventory and semantic classification
 
-## Required preservation boundaries
+`formalism/triform-counterpart-inventory.json` records all four principles as `BOUND_READY`. No semantic collision or counterpart gap was detected in the bounded repository evidence.
 
-- learning != information receipt;
-- learning != authority;
-- becoming without identity capture;
-- no predetermined intellectual destination;
-- human/AI specialization boundaries remain distinct;
-- existing stage/outcome validators remain canonical for their current claims;
-- Tri-Form binding cannot create proof, runtime, execution, publication, release, certification, admissibility, credential, custody, or identity authority.
+The bounded binding preserves:
 
-## Execution order
+- learning is evidenced state transition, not information receipt alone;
+- becoming without identity capture or predetermined intellectual destination;
+- evidence precedes a learning claim and insufficient evidence fails closed;
+- human/AI learning may share transition structure without collapsing agency, consent, authority, or accountability;
+- learning does not create authority.
 
-1. Inventory exact prose/formalism/code/test counterparts for `LTG-P001..LTG-P004`.
-2. Detect semantic gaps or collisions before equivalence binding.
-3. Build a bounded manifest/schema only for directly evidenced counterparts.
-4. Add deterministic validator/tests that fail closed on missing counterparts or authority promotion.
-5. Regress `tools/check_learning_stages.py`, `tools/check_learning_outcomes.py`, the deterministic receipt, and existing validation-compatible tests/surfaces.
-6. Validate exact branch head before merge.
-7. Reconcile the canonical LTG handoff after merge.
+## Installed Tri-Form surfaces
+
+- `formalism/triform-counterpart-inventory.json`;
+- `formalism/triform-manifest.json`;
+- `schemas/triform-manifest.schema.json`;
+- `tools/validate_triform_manifest.py`;
+- `tests/test_triform_manifest.py`;
+- `.github/workflows/validate-ltg-triform.yml`.
+
+The manifest binds each stable principle to explicit prose, formalism/data, executable, and deterministic test surfaces. Maturity remains `TRIFORM_BOUND_CANDIDATE`; no proof promotion is claimed.
+
+## Validation design
+
+The deterministic validator fails closed unless the exact four stable IDs are present, every bound form exists, each principle has prose/math/code/test bindings, and all non-authority controls remain false. Negative tests reject authority promotion, identity capture, and principle loss.
+
+The workflow additionally regresses the existing learning-stage and learning-outcome validators and validates the existing deterministic receipt JSON. Checkout credentials are not persisted; StegVerse/TVC/GitHub runtime token variables are left empty.
 
 ## Completion denominator
 
 1. scoped handoff — COMPLETE;
-2. four-principle counterpart inventory — PENDING;
-3. semantic-gap/collision classification — PENDING;
-4. manifest/schema — PENDING;
-5. deterministic validator/tests — PENDING;
-6. workflow/regression integration — PENDING;
+2. four-principle counterpart inventory — COMPLETE;
+3. semantic-gap/collision classification — COMPLETE;
+4. manifest/schema — COMPLETE;
+5. deterministic validator/tests — COMPLETE;
+6. workflow/regression integration — COMPLETE;
 7. exact-head validation — PENDING;
 8. repository handoff reconciliation + merge — PENDING.
 
-Current bounded completion: `1/8 = 12.5%`.
+Current bounded completion: `6/8 = 75%`.
+
+Developed new Tri-Form/control files: `7`; scaffolding/stubs: `0`.
+
+## Authority boundaries
+
+This lane creates no runtime, execution, admissibility, proof, publication, release, certification, identity-capture, credential, custody, or predetermined-destination authority. Existing learning-stage/outcome validators remain canonical for their existing claims.
+
+## Exact next task
+
+Open the bounded PR, observe exact-head validation and regressions, repair only proven defects, merge only while current head is green, then reconcile this handoff and the canonical repository handoff and close issue `#3`.
 
 ## User work
 
-None currently. This lane is repository-native and machine-executable.
+None currently. Remaining work is repository-native and machine-executable.
